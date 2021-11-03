@@ -8,7 +8,7 @@ locals {
 
 resource "cronitor_heartbeat_monitor" "monitor" {
   count = var.api_key != "" ? 1 : 0
-  name  = var.cluster_name
+  name  = join(":", compact([var.customer_name, var.cluster_name, var.suffix]))
 
   notifications {
     pagerduty = length(var.pagerduty_key) > 0 ? [var.pagerduty_key] : null

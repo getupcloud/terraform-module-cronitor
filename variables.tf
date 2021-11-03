@@ -6,6 +6,11 @@ variable "cluster_name" {
 variable "customer_name" {
   description = "Customer name (Informative only)"
   type        = string
+}
+
+variable "suffix" {
+  description = "Customer name suffix (Informative only)"
+  type        = string
   default     = ""
 }
 
