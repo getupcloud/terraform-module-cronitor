@@ -1,5 +1,5 @@
 locals {
-  note = templatefile("note.tpl", {
+  note = templatefile("${path.module}/note.tpl", {
     cluster_name : var.cluster_name
     customer_name : var.customer_name
     api_endpoint : var.api_endpoint
