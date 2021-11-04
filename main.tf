@@ -22,7 +22,7 @@ resource "cronitor_heartbeat_monitor" "monitor" {
     value                   = var.rule_timeout_minutes
   }
 
-  tags     = compact([var.cluster_name, var.customer_name])
+  tags     = compact(concat([var.cluster_name, var.customer_name, var.suffix], var.tags))
   timezone = var.timezone
   note     = local.note
 }

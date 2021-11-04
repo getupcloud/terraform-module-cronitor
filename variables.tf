@@ -14,6 +14,12 @@ variable "suffix" {
   default     = ""
 }
 
+variable "tags" {
+  description = "Monitor tags (Informative only)"
+  type        = list(string)
+  default     = []
+}
+
 variable "api_endpoint" {
   description = "Kubernetes API endpoint (Informative only)"
   type        = string
