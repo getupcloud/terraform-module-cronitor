@@ -32,6 +32,12 @@ variable "api_key" {
   default     = ""
 }
 
+variable "notifications_lists" {
+  description = "Cronitor Notification Lists to send alerts"
+  type        = list(string)
+  default     = ["operations"]
+}
+
 variable "pagerduty_key" {
   description = "Cronitor PagerDuty key"
   type        = string
