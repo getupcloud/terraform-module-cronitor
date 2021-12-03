@@ -32,10 +32,10 @@ variable "api_key" {
   default     = ""
 }
 
-variable "notifications_lists" {
+variable "notification_lists" {
   description = "Cronitor Notification Lists to send alerts"
   type        = list(string)
-  default     = ["operations"]
+  default     = ["default"]
 }
 
 variable "pagerduty_key" {
