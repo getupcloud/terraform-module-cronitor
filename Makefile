@@ -1,9 +1,16 @@
-test: init
-	terraform validate
+test: setup fmt init validate clean
 
-init:
+i init:
 	terraform init
 
-fmt:
-	terraform fmt -recursive
+v validate:
+	terraform validate
 
+f fmt:
+	terraform fmt
+
+setup:
+	ln -fs tests/providers.tf
+
+clean:
+	rm providers.tf
