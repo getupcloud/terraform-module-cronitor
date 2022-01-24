@@ -3,6 +3,12 @@ variable "cluster_name" {
   type        = string
 }
 
+variable "cluster_sla" {
+  description = "Cluster SLA"
+  type        = string
+  default     = "none"
+}
+
 variable "customer_name" {
   description = "Customer name (Informative only)"
   type        = string
