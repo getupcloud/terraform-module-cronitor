@@ -1,3 +1,9 @@
+variable "cronitor_enabled" {
+  description = "Creates and enables Cronitor monitor."
+  type        = bool
+  default     = true
+}
+
 variable "cluster_name" {
   description = "Cluster name"
   type        = string
