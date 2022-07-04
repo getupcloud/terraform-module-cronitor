@@ -38,12 +38,6 @@ variable "api_endpoint" {
   default     = ""
 }
 
-variable "api_key" {
-  description = "Cronitor API key. Leave empty to destroy"
-  type        = string
-  default     = ""
-}
-
 variable "notification_lists" {
   description = "Cronitor Notification Lists to send alerts"
   type        = list(string)

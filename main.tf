@@ -7,7 +7,7 @@ locals {
 }
 
 resource "cronitor_heartbeat_monitor" "monitor" {
-  count = (var.cronitor_enabled && var.api_key != "") ? 1 : 0
+  count = var.cronitor_enabled ? 1 : 0
   name  = join(":", compact([var.customer_name, var.cluster_name, var.suffix]))
 
   notifications {
