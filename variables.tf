@@ -38,8 +38,8 @@ variable "api_endpoint" {
   default     = ""
 }
 
-variable "notification_lists" {
-  description = "Cronitor Notification Lists to send alerts"
+variable "notification_list" {
+  description = "Cronitor Notification List to send alerts"
   type        = list(string)
   default     = ["default"]
 }
