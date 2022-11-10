@@ -12,7 +12,7 @@ resource "cronitor_heartbeat_monitor" "monitor" {
 
   notifications {
     pagerduty = length(var.pagerduty_key) > 0 ? [var.pagerduty_key] : null
-    templates = var.notification_list
+    templates = var.notification_lists[var.cluster_sla]
   }
 
   rule {

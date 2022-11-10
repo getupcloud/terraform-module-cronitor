@@ -38,10 +38,14 @@ variable "api_endpoint" {
   default     = ""
 }
 
-variable "notification_list" {
-  description = "Cronitor Notification List to send alerts"
-  type        = list(string)
-  default     = ["default"]
+variable "notification_lists" {
+  description = "Cronitor Notification lists by SLA"
+  type        = any
+  default = {
+    high : ["default", "opsgenie-high-sla"]
+    low : ["default", "opsgenie-low-sla"]
+    none : []
+  }
 }
 
 variable "pagerduty_key" {
