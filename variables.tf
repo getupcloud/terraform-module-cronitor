@@ -69,5 +69,5 @@ variable "rule_timeout_minutes" {
 variable "rule_type" {
   description = "Rule alerting type"
   type        = string
-  default     = "run_ping_not_received"
+  default     = "not_run_in"
 }

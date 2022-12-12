@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     cronitor = {
-      source  = "nauxliu/cronitor"
+      source  = "getupcloud/cronitor"
       version = "~> 1"
     }
   }
