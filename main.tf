@@ -26,4 +26,11 @@ resource "cronitor_heartbeat_monitor" "monitor" {
   tags     = compact(concat([var.cluster_name, "sla-${var.cluster_sla}", var.customer_name, var.suffix], var.tags))
   timezone = var.timezone
   note     = trimspace(local.note)
+
+  lifecycle {
+    ignore_changes = [
+      note,
+      rule
+    ]
+  }
 }
